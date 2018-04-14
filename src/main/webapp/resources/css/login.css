@@ -1,0 +1,22 @@
+body{
+    height: 100%;
+    background: linear-gradient(0deg, white, dimgrey) no-repeat;
+}
+.container{
+    width: 30%;
+    height: 30%;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.loginHeader{
+    text-align: center;
+}
+.buttonBlock{
+    padding-bottom:10%;
+}
+.inputBlock{
+    padding-bottom:40%;
+}
