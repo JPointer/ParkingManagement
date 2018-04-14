@@ -25,7 +25,7 @@
 				<sec:authorize access="hasAnyRole('REGULAR','VIP')">driver profile</sec:authorize>
 			</a></li>
 			<li><a href='<spring:url value="/list"/>'>
-				<sec:authorize access="hasRole('OPERATOR')">drivers list</sec:authorize>
+				<sec:authorize access="hasRole('OPERATOR')">visits list</sec:authorize>
 				<sec:authorize access="hasAnyRole('REGULAR','VIP')">parking list</sec:authorize>
 			</a></li>
 			<li><a href="/rates">parking rates</a></li>

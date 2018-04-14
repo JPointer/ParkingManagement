@@ -26,7 +26,7 @@
 				<sec:authorize access="hasAnyRole('REGULAR','VIP')">driver profile</sec:authorize>
 			</a></li>
 			<li><a href='<spring:url value="/list"/>'>
-				<sec:authorize access="hasRole('OPERATOR')">drivers list</sec:authorize>
+				<sec:authorize access="hasRole('OPERATOR')">visits list</sec:authorize>
 				<sec:authorize access="hasAnyRole('REGULAR','VIP')">parking list</sec:authorize>
 			</a></li>
 			<li><a href='<spring:url value="/rates"/>'>parking rates</a></li>
@@ -58,10 +58,13 @@
 				<td align="center"><h2>status:</h2></td>
 				<td align="center"><h2>${role}</h2></td>
 			</tr>
-			<tr>
-				<td align="center"><h2>to pay:</h2></td>
-				<td align="center"><h2>${user.bill}</h2></td>
-			</tr>
+			<sec:authorize access="hasAnyRole('REGULAR','VIP')">
+				<tr>
+					<td align="center"><h2>to pay:</h2></td>
+					<td align="center"><h2>${user.bill}</h2></td>
+				</tr>
+			</sec:authorize>
+
 
 		</table>
 	</div>
